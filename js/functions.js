@@ -5,12 +5,12 @@ var sliderStyle = document.getElementById("fontStyle");
 var sliderColor = document.getElementById("fontColor");
 var style = ["Arial","Verdana","Trebuchet MS","Gill Sans","Arial Narrow","sans-serif","Times","Georgia","Palatino","Courier New","FreeMono","monospace","Comic Sans MS","Apple Chancery","Brush Script MT","Impact"];
 
-document.getElementById('sizeValue').innerHTML = sliderSize.value;
+document.getElementById('sizeValue').innerHTML = sliderSize.value + "px";
 document.getElementById('styleValue').innerHTML = style[sliderStyle.value-1];
 document.getElementById('colorValue').innerHTML = "#" + dec2webhex(sliderColor.value);
 
 sliderSize.oninput = function() {
-    dynamicText.style.fontSize = this.value;
+    dynamicText.style.fontSize = this.value + "px";
     document.getElementById('sizeValue').innerHTML = this.value + "px";
 }
 
