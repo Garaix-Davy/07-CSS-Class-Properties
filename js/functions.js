@@ -7,11 +7,11 @@ var style = ["Arial","Verdana","Trebuchet MS","Gill Sans","Arial Narrow","sans-s
 
 document.getElementById('sizeValue').innerHTML = sliderSize.value;
 document.getElementById('styleValue').innerHTML = style[sliderStyle.value-1];
-document.getElementById('colorValue').innerHTML = dec2webhex(sliderColor.value);
+document.getElementById('colorValue').innerHTML = "#" + dec2webhex(sliderColor.value);
 
 sliderSize.oninput = function() {
     dynamicText.style.fontSize = this.value;
-    document.getElementById('sizeValue').innerHTML = this.value;
+    document.getElementById('sizeValue').innerHTML = this.value + "px";
 }
 
 sliderStyle.oninput = function() {
